@@ -73,6 +73,6 @@ The vulnerable path exports the image but receives a write error. The secure pat
 
 | Member name | Roll number | Category | Variant |
 | --- | --- | --- | --- |
-| Fill in | Fill in | OS command injection | In-band (command output returned) |
+| Dinesh | IIT2024264 | OS command injection | In-band (command output returned) |
 
 Course references: supplied assignment, Tables 1–2, and `Common_Web_Vulnerabilities.pptx`, slides 19–35. Complete ownership details and be ready to explain the implementation at the viva.
