@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <span class="badge"><i></i>Coursework demo</span>
+  <h1>SQL Injection: Authentication Bypass</h1>
+  <p class="sub">Same login, same database, two implementations. Pick one and compare.</p>
+  <div class="grid">
+    <a class="opt v" href="/vulnerable"><span class="badge" style="--mode:var(--bad);--mode-bg:var(--bad-bg)"><i></i>Vulnerable</span>
+      <h2>String-concatenated query</h2><p>User input is glued into the SQL text. <code>admin' --</code> logs in without a password.</p></a>
+    <a class="opt s" href="/secure"><span class="badge"><i></i>Secure</span>
+      <h2>Parameterized query</h2><p>SQL and values are sent separately. The same payload is treated as plain data.</p></a>
+  </div>
+</section>
+{% endblock %}
