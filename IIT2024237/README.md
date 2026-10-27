@@ -6,17 +6,6 @@
 
 ---
 
-## Table 3: Ownership Declaration
-
-| Member Name | Roll Number | Vulnerability Category | Variant Implemented | Implemented Mitigation |
-| :--- | :--- | :--- | :--- | :--- |
-| **[Your Name]** | **[Your Roll Number]** | **Cross-Site Scripting (XSS)** | **Variant 1: Stored XSS** | **Context-Aware Output Encoding** |
-| [Member 2] | [Roll 2] | SQL Injection | Variant 1 / 2 | Parameterised Queries |
-| [Member 3] | [Roll 3] | OS Command Injection | Variant 1 / 2 | Parameterised Execution |
-| [Member 4] | [Roll 4] | CSRF | Variant 1 / 2 | Anti-CSRF Synchronizer Tokens |
-
----
-
 ## 1. Quick Start Guide
 
 ### Prerequisites
