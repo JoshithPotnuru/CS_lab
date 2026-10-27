@@ -14,7 +14,7 @@ This repository contains the group implementations for the Web Server Security l
 | :--- | :--- | :--- | :--- | :--- |
 | **K Shiva Krishna** | **iit2024222** | **SQL Injection** | **[Enter Variant]** | **[Enter Mitigation]** |
 | **P Joshith** | **iit2024237** | **Cross-Site Scripting (XSS)** | **Variant 1: Stored XSS** | **Context-Aware Output Encoding** |
-| **M Dinesh** | **iit2024264** | **OS Command Injection** | **[Enter Variant]** | **[Enter Mitigation]** |
+| **M Dinesh** | **iit2024264** | **OS Command Injection** | **Variant 1:In-band** | **Allow-list & parameterized execution** |
 | **G Mani Koushik** | **iit2024260** | **Cross-Site Request Forgery (CSRF)** | **[Enter Variant]** | **[Enter Mitigation]** |
 
 ---
@@ -126,32 +126,3 @@ CS_lab/
 **Mitigation:** [Enter Mitigation]
 
 [Open Implementation →](iit2024260/)
-
----
-
-## Technologies
-
-The individual implementations may use different technologies depending on the vulnerability being demonstrated. Each member's folder contains the complete source code, configuration files, documentation, and demonstration material for their assigned vulnerability.
-
----
-
-## Academic Evaluation
-
-The project is prepared for:
-
-- Group Repository Submission
-- 2–3 Minute Video Demonstration
-- Individual Viva Voce
-
----
-
-## Conclusion
-
-This group project demonstrates practical exploitation and mitigation of four major web security vulnerabilities:
-
-- **SQL Injection**
-- **Cross-Site Scripting (XSS)**
-- **OS Command Injection**
-- **Cross-Site Request Forgery (CSRF)**
-
-Each member's folder contains the complete implementation and detailed documentation for their assigned vulnerability.
